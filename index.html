@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="product-page">
+    <!-- Product Image Gallery -->
+    <section class="image-gallery">
+      <div class="main-image">
+        <img id="main-product-image" src="assets/image1.jpg" alt="Main Product">
+      </div>
+      <div class="thumbnail-gallery">
+        <img src="assets/image1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="updateMainImage(this)">
+        <img src="assets/image2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="updateMainImage(this)">
+        <img src="assets/image3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="updateMainImage(this)">
+        <img src="assets/image4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="updateMainImage(this)">
+      </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+      <h1>Product Name</h1>
+      <p class="price">$99.99</p>
+
+      <!-- Size Chart -->
+      <button id="size-chart-btn">Size Chart</button>
+      <div id="size-chart-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <table>
+            <tr><th>Size</th><th>Chest</th><th>Waist</th></tr>
+            <tr><td>Small</td><td>34-36"</td><td>28-30"</td></tr>
+            <tr><td>Medium</td><td>38-40"</td><td>32-34"</td></tr>
+            <tr><td>Large</td><td>42-44"</td><td>36-38"</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Product Variants -->
+      <div class="variants">
+        <div class="colors">
+          <span>Colors:</span>
+          <button class="color-swatch" style="background-color: red;" onclick="selectVariant('red')"></button>
+          <button class="color-swatch" style="background-color: blue;" onclick="selectVariant('blue')"></button>
+        </div>
+        <div class="sizes">
+          <span>Sizes:</span>
+          <select id="size-options">
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l">Large</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Compare Colors -->
+      <button id="compare-colors-btn">Compare Colors</button>
+
+      <!-- Tabs for Product Info -->
+      <div class="tabs">
+        <button class="tab-btn" onclick="openTab('description')">Description</button>
+        <button class="tab-btn" onclick="openTab('product-info')">Product Information</button>
+        <button class="tab-btn" onclick="openTab('shipping-details')">Shipping Details</button>
+        <div id="description" class="tab-content">This is the product description.</div>
+        <div id="product-info" class="tab-content">Details about the product.</div>
+        <div id="shipping-details" class="tab-content">Shipping details here.</div>
+      </div>
+    </section>
+
+    <!-- Pair Well With Section -->
+    <section class="pair-well">
+      <h2>Pair Well With</h2>
+      <div class="carousel">
+        <div class="card">
+          <img src="assets/pair1.jpg" alt="Pair 1">
+          <p>Product 1</p>
+          <p>$19.99</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="assets/pair2.jpg" alt="Pair 2">
+          <p>Product 2</p>
+          <p>$29.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Bundle -->
+    <section class="product-bundle">
+      <h2>Buy These Together</h2>
+      <div class="bundle">
+        <div class="bundle-item">
+          <img src="assets/item1.jpg" alt="Bundle Item 1">
+          <p>$50.00</p>
+        </div>
+        <div class="bundle-item">
+          <img src="assets/item2.jpg" alt="Bundle Item 2">
+          <p>$30.00</p>
+        </div>
+      </div>
+      <p>Total: $80.00</p>
+      <button>Add Bundle to Cart</button>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <h2>Related Products</h2>
+      <div class="grid">
+        <div class="product-card">
+          <img src="assets/related1.jpg" alt="Related 1">
+          <p>Related Product 1</p>
+          <p>$20.00</p>
+        </div>
+        <div class="product-card">
+          <img src="assets/related2.jpg" alt="Related 2">
+          <p>Related Product 2</p>
+          <p>$30.00</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
